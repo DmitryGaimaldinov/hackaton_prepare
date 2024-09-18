@@ -8,7 +8,7 @@ RUN apt-get update && \
 ENV TAR_OPTIONS=--no-same-owner
 
 # Install flutter
-RUN git clone -b 3.22.2 --depth 1 https://github.com/flutter/flutter.git /usr/local/flutter && \
+RUN git clone -b 3.24.3 --depth 1 https://github.com/flutter/flutter.git /usr/local/flutter && \
     cd /usr/local/flutter && \
     /usr/local/flutter/bin/flutter doctor -v
 ENV PATH="/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/bin:${PATH}"
