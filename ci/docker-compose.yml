@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx:
+    build: ..
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - "./nginx/logs:/etc/logs/nginx"
+      - "./nginx/conf.d:/etc/nginx/conf.d/"
+      - "../build/web:/var/www/html"
